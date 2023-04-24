@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap");
+
+.barra{
+    background-color: rgb(51, 48, 44);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem ;
+    font-family: 'Bruno Ace', cursive;
+}
+.nav-lista{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 0.2rem;
+    padding: 0;
+}
+.nav-lista li{
+    margin: 0.71rem;
+}
+.nav-lista li a{
+    font-size: 1rem;
+    color: aliceblue;
+}
+.logo-linke{
+    color: #0e76a8;
+    font-size: 1.6rem;
+}
+.logo-github{
+    color: black;
+    font-size: 1.6rem;
+    align-items: center;
+}
+.logo-ingresar{
+    font-size: 1.6rem;
+    border: none;
+    background-color:transparent
+}
