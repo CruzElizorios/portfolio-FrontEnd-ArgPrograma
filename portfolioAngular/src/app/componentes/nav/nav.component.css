@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap");
+
 
 .barra{
     background-color: rgb(51, 48, 44);
@@ -17,6 +17,10 @@
 }
 .nav-lista li{
     margin: 0.71rem;
+}
+.nav-lista li:hover{
+    background-color: #F9A826;
+    /* background-color: #00BFA6; verdecito*/
 }
 .nav-lista li a{
     font-size: 1rem;

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent {
-
+  nombre: string = 'Iñaki C. Elizondo Rios'
 }
