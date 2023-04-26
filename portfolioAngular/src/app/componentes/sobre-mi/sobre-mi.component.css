@@ -1,0 +1,13 @@
+.sobreMi{
+    background-color: var(--color-blancoperlado);
+    height: 100vh;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+}
+.sobreMi-titulo{
+    font-family: var(--letra-mayus);
+    background-color: crimson;
+    padding: 1rem;
+    color: var(--color-principal-negro);
+}

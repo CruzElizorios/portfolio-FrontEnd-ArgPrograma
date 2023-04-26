@@ -1,5 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
-@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Bruno+Ace+SC&display=swap");
+:root{
+	--color-principal-negro:rgb(51, 48, 44);
+	--color-principal:#F9A826;
+	--color-principal-dark:#dc8c06;
+	--color-secundario:#00BFA6;
+	--color-blancoperlado:aliceblue;
+	--color-grisclaro:rgb(175, 175, 175);
+	--letra:'Bruno Ace', cursive;
+	--letra-mayus:'Bruno Ace SC', cursive;
+}
 *{
 	margin: 0;
 	padding: 0;
@@ -9,6 +19,7 @@
 }
 body{
     background-color: cadetblue;
+	font-family: 'Bruno Ace', cursive;
 }
 a{
     text-decoration: none;
