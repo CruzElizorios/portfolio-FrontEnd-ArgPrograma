@@ -24,3 +24,6 @@ body{
 a{
     text-decoration: none;
 }
+.vacio{
+    display: none;
+}

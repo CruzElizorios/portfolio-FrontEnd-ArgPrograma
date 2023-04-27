@@ -7,7 +7,21 @@
 }
 .sobreMi-titulo{
     font-family: var(--letra-mayus);
-    background-color: crimson;
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
     padding: 1rem;
     color: var(--color-principal-negro);
+}
+.sobreMi-img{
+    width: 400px;
+}
+.sobreMi-img-piso{
+    background-color: var(--color-secundario);
+    width: 100%;
+    height: 28%;
+    border-radius: 50%;
+    position: absolute;
+    top: 80%;
+    left: 0%;
+    z-index: -1;
 }

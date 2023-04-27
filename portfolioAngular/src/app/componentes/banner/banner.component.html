@@ -20,9 +20,10 @@
                     </div>
                 </div>
             </div>
-            <div class="banner-container-imagen col-xs-12 col-md-5">
-                <div class="banner-container-imagen-foto"></div>
-                <img class="img-fluid" src="../../../assets/img/draw/programando_designer.svg"  alt="">
+            <div (click)="mostrarfoto()" class="banner-container-imagen col-xs-8 col-md-5">
+                <div class="banner-container-imagen-luz"></div>
+                <img class="img-fluid banner-container-imagen-pre" id="bannerImg" src="{{imgEstandar}}"  alt="">
+                <div [className]="clasePerfil"><img class="img-fluid" src="../../../assets/img/fotoperfil.png" alt=""></div>
             </div>
         </div>
     </div>
