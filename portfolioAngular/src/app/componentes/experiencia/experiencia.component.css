@@ -1,0 +1,24 @@
+.titulo{
+    font-family: var(--letra-mayus);
+    color: aliceblue;
+    font-size: 2rem;
+    margin: 1rem;
+    /* border-bottom: 0.2rem var(--color-principal) solid; */
+}
+
+.titulo::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: var(--color-principal);
+    transform: scale(0,3);
+    transform-origin: left;
+    transition: transform .50s;
+    
+}
+.colum1:hover .titulo::after {
+    transform: scale(1,1);
+}
+.colum2:hover .titulo::after {
+transform: scale(1,1);
+}

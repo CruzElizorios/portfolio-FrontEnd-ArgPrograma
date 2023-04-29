@@ -12,6 +12,10 @@
     padding: 1rem;
     color: var(--color-principal-negro);
 }
+.contSobreMi{
+    position: relative;
+    z-index: 1;
+}
 .sobreMi-img{
     width: 400px;
 }
@@ -24,4 +28,8 @@
     top: 80%;
     left: 0%;
     z-index: -1;
+}
+.sobreMi-parrafo{
+    color: var(--color-principal-negro);
+    font-size: 1rem;
 }
