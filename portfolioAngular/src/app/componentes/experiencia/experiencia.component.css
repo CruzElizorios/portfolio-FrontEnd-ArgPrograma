@@ -1,9 +1,9 @@
 .titulo{
     font-family: var(--letra-mayus);
-    color: aliceblue;
+    color: var(--color-blancoperlado);
     font-size: 2rem;
     margin: 1rem;
-    /* border-bottom: 0.2rem var(--color-principal) solid; */
+    margin-bottom: 2rem;
 }
 
 .titulo::after {

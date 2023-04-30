@@ -1,7 +1,5 @@
-
-
 .barra{
-    background-color: rgb(51, 48, 44);
+    background-color: var(--color-principal-negro);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,13 +16,42 @@
 .nav-lista li{
     margin: 0.71rem;
 }
-.nav-lista li:hover{
-    background-color: #F9A826;
-    /* background-color: #00BFA6; verdecito*/
-}
 .nav-lista li a{
     font-size: 1rem;
-    color: aliceblue;
+    color: var(--color-blancoperlado);
+}
+
+.nav-lista li::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: var(--color-principal);
+    transform: scale(0,1);
+    transform-origin: center;
+    transition: transform .30s;
+    
+}
+.nav-lista li:hover::after {
+    transform: scale(1,1);
+}
+
+
+.nav-lista2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+    padding: 0.2rem;
+    background-color: var(--color-blancoperlado);
+    border-radius: 1rem;
+}
+.nav-lista2 li {
+    margin: 0.2rem;
+    padding: 0.2rem 0.45rem;
+    border-radius: 0.8rem;
+}
+.nav-lista2 li:hover{
+    opacity: 0.5;
 }
 .logo-linke{
     color: #0e76a8;
@@ -33,10 +60,77 @@
 .logo-github{
     color: black;
     font-size: 1.6rem;
-    align-items: center;
 }
 .logo-ingresar{
     font-size: 1.6rem;
     border: none;
-    background-color:transparent
+    background-color:transparent;
+}
+.nav-cerrar, .nav-abrir {
+    display: none;
+}
+
+@media screen and (max-width: 820px) {
+    .barra{
+        padding-right: 0;
+    }
+    .nav-cerrar, .nav-abrir {
+        display: block;
+    }
+    .nav-lista{
+        position: absolute;
+        flex-direction: column;
+        background-color: var(--color-principal-negro);
+        align-items: center;
+        justify-content:start;
+        top: 0;
+        right: 0%;
+        bottom: -1%;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+        z-index: 10;
+    }
+    .nav-cerrar{
+        font-size: 1.6rem;
+        border: none;
+        background-color:transparent;
+        color: var(--color-principal-negro);
+        padding: 0.15rem 0.65rem;
+        border-radius: 50%;
+        background-color: var(--color-principal);
+        margin-bottom: 1rem;
+    }
+    .visible{
+        visibility: visible;
+        opacity: 1;
+        animation-name: entrada;
+        animation-duration: 0.8s;
+    }
+@keyframes entrada {
+    0%{
+        right: -10%;
+    }
+    100%{
+        right: 0%;
+    }
+}
+    .ocultar{
+        opacity: 0;
+        visibility: hidden;
+        transition: ease;
+        transition-duration: 0.8s;
+        animation-name: salida;
+        animation-duration: 0.8s;
+    }
+    @keyframes salida {
+        0%{
+            right: 0%;
+        }
+        100%{
+            right: -10%;
+        }
+    }
+
+
+
 }

@@ -1,5 +1,7 @@
 .banner-container{
     background-color: var(--color-principal-negro);
+    /* background-image: url(../../../assets/img/salonIluminado.jpg);
+    background-size: cover; */
 }
 .banner-container-descripcion{
     color: var(--color-blancoperlado);

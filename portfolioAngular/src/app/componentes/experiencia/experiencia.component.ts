@@ -24,7 +24,7 @@ export class ExperienciaComponent {
   },
   {
     "id": 3,
-    "title": " trabajo 3",
+    "title": "Ing Industrial UCA",
     "years": "2023-2024",
     "urlimage":"https://companieslogo.com/img/orig/ACN_BIG.D-871a76ce.png?t=1633439499",
     "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt ullam nostrum excepturi impedit optio consectetur maxime nobis veniam nemo itaque!"

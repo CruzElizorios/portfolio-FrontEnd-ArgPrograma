@@ -2,16 +2,20 @@
     <div class="logo">
         <img src="../../../assets/img/logo2ArgProg.png" alt="">
     </div>
-    <ul class="nav-lista">
+    <ul class="{{claseNav}}">
+        <button (click)="desplegarNav()" class="nav-cerrar"><i class="fa-solid fa-xmark"></i></button>
         <li><a href="">acerca de mi</a></li>
         <li><a href="">mis proyectos</a></li>
         <li><a href="">educación</a></li>
     </ul>
 
-    <ul class="nav-lista" style="background-color: aliceblue; border-radius: 1rem;">
+    <ul class="nav-lista2">
         <li><a href=""><i class="bi bi-github logo-github"></i></a></li>
         <li><a href=""><i class="bi bi-linkedin logo-linke"></i></a></li>
-        <li><button class="logo-ingresar" ><i class="bi bi-person-circle"></i></button></li>
+        <li><button class="logo-ingresar"><i class="bi bi-person-circle"></i></button></li>
+        <li class="nav-abrir"><button class="logo-ingresar" (click)="desplegarNav()" style="margin-left: -0.2rem;">
+            <i class="fa-solid fa-bars"></i>
+        </button></li>
     </ul>
 </nav>
 

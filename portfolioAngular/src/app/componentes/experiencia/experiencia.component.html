@@ -1,15 +1,15 @@
 <section class="container-fluid px-1 py-5 " style="background-color: var(--color-principal-negro);">
-    <div class="container-lg py-5" style="bacground-color: chartreuse;">
+    <div class="container-lg py-5">
         <div class="row">
-            <div class="col px-5 colum1" style="bacground-color: rgb(223, 148, 37);">
+            <div class="col px-4 colum1">
                 <h3 class="titulo">Mi experiencia</h3>
-                <ul style="bacground-color: rgb(7, 6, 7);">
+                <ul>
                     <app-mistrabajos *ngFor="let unTrabajo of trabajos" [trabajosData]="unTrabajo"></app-mistrabajos>
                 </ul>
             </div>
-            <div class="col px-5 colum2" style="backround-color: brown;">
+            <div class="col px-4 colum2">
                 <h3 class="titulo">Educación</h3>
-                <ul style="backround-color: darkmagenta;">
+                <ul>
                     <app-mistrabajos *ngFor="let unTrabajo of trabajos" [trabajosData]="unTrabajo"></app-mistrabajos>
                 </ul>
             </div>

@@ -1,3 +1,6 @@
+.contLi{
+    margin: 1.5rem 0rem;
+}
 .titulo{
     color: var(--color-blancoperlado);
     font-size: 1.3rem;
@@ -9,18 +12,14 @@
 }
 .descrip{
     font-size: 1rem;
-    margin: 1rem;
+    margin: 0.2rem 0rem;
     color: rgba(240, 248, 255, 0.932);
 }
-.contLi{
-    position: relative;
-}
-
 .titulo::after {
     content: "";
     display: block;
     height: 3px;
-    width: 60%;
+    width: 80%;
     background-color: var(--color-secundario);
     transform: scale(0,1);
     transform-origin: left;
@@ -30,38 +29,14 @@
 .contLi:hover .titulo::after {
     transform: scale(1,1);
 }
-
-
-
-
-
-
-
-
-
-
-/* 
-.barra{
-    width: 8%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items:center ;
-    position: absolute;
-    right: 100%;
+.contLi:hover .flecha{
+    color: var(--color-secundario);
+    transform: scale(1,1);
 }
-.barra-lin{
-    height: 85%;
-    width: 4px;
-    background-color: var(--color-secundario);
-    z-index: 1;
-    border-bottom-right-radius: 10%;
-    border-bottom-left-radius: 10%;
-} 
-.barra-cir{
-    width: 30px;
-    height: 30px;
-    background-color: var(--color-principal-dark);
-    border-radius: 50%;
-    z-index: 3; 
-} */
+.flecha{
+    color: #e2a703;
+    font-size: 1.2rem;
+    transform: scale(0.8,1);
+    transform-origin: left;
+    transition: transform .20s;
+}
