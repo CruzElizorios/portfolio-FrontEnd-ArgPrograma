@@ -1,8 +1,7 @@
-
-<div class="banner-container d-flex align-items-center justify-content-center h-100">
-    <div class="container-lg">
-        <div class="row">
-            <div class="col-sx-8 col-md-7 d-flex align-items-center">
+<div class="container-fluid banner-container ">
+    <div class="container-lg py-5 px-4" style="background-color: darkcyan;">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-7 d-flex align-items-center" style="background-color: crimson;">
                 <div class="banner-container-descripcion">
                     <span>bienvenido a mi portfolio</span>
                     <h1>Hola soy <b class="resaltado">{{nombre}}</b></h1>
@@ -14,13 +13,13 @@
                         <div><i class="fa-brands fa-java"></i><span> Java</span></div>
                         <div><i class="fa-brands fa-angular"></i><span> Angular</span></div>
                     </div>
-                    <div class="d-flex justify-content-start">
+                    <div class="contenedor-botones">
                         <button class="contacto">contacto!</button>
-                        <button class="contacto">descubrir más</button>
+                        <button class="contacto">descubrir</button>
                     </div>
                 </div>
             </div>
-            <div (click)="mostrarfoto()" class="banner-container-imagen col-xs-8 col-md-5">
+            <div (click)="mostrarfoto()" class="banner-container-imagen col-9 col-sm-7 col-md-6 col-lg-5">
                 <div class="banner-container-imagen-luz"></div>
                 <img class="img-fluid banner-container-imagen-pre" id="bannerImg" src="{{imgEstandar}}"  alt="">
                 <div [className]="clasePerfil"><img class="img-fluid" src="../../../assets/img/fotoperfil.png" alt=""></div>

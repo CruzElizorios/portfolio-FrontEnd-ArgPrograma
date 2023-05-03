@@ -115,10 +115,10 @@
     }
 }
     .ocultar{
+        transition:ease-in-out;
+        transition-duration: 0.2s;
         opacity: 0;
         visibility: hidden;
-        transition: ease;
-        transition-duration: 0.8s;
         animation-name: salida;
         animation-duration: 0.8s;
     }
@@ -131,6 +131,14 @@
         }
     }
 
-
-
+}
+@media screen and (max-width: 400px){
+    .nav-lista2 li {
+        margin: 0.2rem;
+        padding: 0.2rem;
+        border-radius: 0.8rem;
+    }
+    .logo img{
+        width: 80%;
+    }
 }

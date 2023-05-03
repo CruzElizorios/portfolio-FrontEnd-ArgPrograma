@@ -1,7 +1,9 @@
 .banner-container{
     background-color: var(--color-principal-negro);
-    /* background-image: url(../../../assets/img/salonIluminado.jpg);
-    background-size: cover; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 .banner-container-descripcion{
     color: var(--color-blancoperlado);
@@ -47,7 +49,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 5rem;
+    padding: 3rem;
     border-radius: 1rem;
     animation: efect;
     animation-duration: 0.5s;
@@ -69,6 +71,7 @@
 
 .tecnologias{
     display: flex;
+    flex-wrap: wrap;
     color: var(--color-grisclaro);
     gap: 1rem;
     font-size: 1.1rem;
@@ -76,8 +79,13 @@
     align-items: center;
     padding: 0.5rem;
 }
+.contenedor-botones{
+    display: flex;
+    justify-content: start;
+}
 .contacto{
     margin: 1rem;
+    font-size: 1rem;
     background-color: var(--color-principal);
     color: var(--color-principal-negro);
     padding: 1rem;
@@ -89,4 +97,44 @@
 .contacto:hover{
     color: var(--color-principal-dark);
     background-color: var(--color-blancoperlado);
+}
+@media screen and (max-width:991px){
+    .banner-container{
+        max-height: 3000px;
+        height: auto;
+    }
+    .banner-container-imagen{
+        
+        background-color: darkgreen;
+        margin: 1rem;
+    }
+    .banner-container-descripcion{
+        text-align: center;
+    }
+    .tecnologias{
+        justify-content: center;
+    }
+    .contenedor-botones{
+        justify-content: center;
+    }
+    .banner-container-imagen-perfil{
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .banner-container-descripcion h1{
+        font-size: 2rem;
+    }
+    .banner-container-descripcion h2{
+        font-size: 1.3rem;
+    }
+    .tecnologias{
+        font-size: 0.9rem;
+    }
+    .contacto{
+        font-size: 0.8rem;
+        margin: 1rem;
+        padding: 0.7rem;
+    }
 }
