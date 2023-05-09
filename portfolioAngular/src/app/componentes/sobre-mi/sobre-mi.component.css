@@ -33,3 +33,18 @@
     color: var(--color-principal-negro);
     font-size: 1rem;
 }
+
+@media screen and (max-width: 767px){
+    .contSobreMi{
+        margin-bottom: 2rem;
+    }
+    .sobreMi-titulo{
+        font-size:1.8rem ;
+    }
+
+}
+@media screen and (max-width: 500px){
+    .sobreMi-parrafo{
+        font-size: 0.8rem;
+    }
+}

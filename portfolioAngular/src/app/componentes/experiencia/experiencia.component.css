@@ -5,7 +5,7 @@
     margin: 1rem;
     margin-bottom: 2rem;
 }
-
+/*efecto de lineas*/
 .titulo::after {
     content: "";
     display: block;
@@ -21,4 +21,9 @@
 }
 .colum2:hover .titulo::after {
 transform: scale(1,1);
+}
+@media screen and (max-width: 500px){
+    .titulo{
+        font-size: 1.8rem;
+    }
 }

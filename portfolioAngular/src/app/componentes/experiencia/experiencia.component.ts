@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ExperienciaComponent {
   
-  trabajos = [
+  trabajos:any = [
     {
     "id": 1,
     "title": "trabajo 1",
