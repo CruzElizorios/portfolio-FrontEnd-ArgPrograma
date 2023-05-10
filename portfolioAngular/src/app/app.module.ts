@@ -9,6 +9,9 @@ import { BannerComponent } from './componentes/banner/banner.component';
 import { SobreMiComponent } from './componentes/sobre-mi/sobre-mi.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { MistrabajosComponent } from './componentes/mistrabajos/mistrabajos.component';
+import { HttpClientModule } from '@angular/common/http';
+import { InicioComponent } from './componentes/inicio/inicio.component';
+import { LoginComponent } from './componentes/login/login.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +21,14 @@ import { MistrabajosComponent } from './componentes/mistrabajos/mistrabajos.comp
     BannerComponent,
     SobreMiComponent,
     ExperienciaComponent,
-    MistrabajosComponent
+    MistrabajosComponent,
+    InicioComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

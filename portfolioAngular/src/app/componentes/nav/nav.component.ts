@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -14,5 +15,11 @@ export class NavComponent {
     } else{
       this.claseNav = "nav-lista ocultar"
     }
+  }
+
+  constructor(private router: Router){}
+  
+  voyIngresar(){
+    this.router.navigate(['/login']);
   }
 }
