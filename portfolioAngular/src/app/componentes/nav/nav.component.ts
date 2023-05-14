@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css']
 })
-export class NavComponent {
+export class NavComponent implements OnInit{
   claseNav = "nav-lista ocultar";
-
+  isLogged = false;
   desplegarNav(){
     if (this.claseNav === "nav-lista ocultar") {
       this.claseNav = "nav-lista visible"
@@ -17,9 +18,24 @@ export class NavComponent {
     }
   }
 
-  constructor(private router: Router){}
+  constructor(private router: Router, private tokenService: TokenService){}
+  
+  ngOnInit(): void {
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    }else{
+      this.isLogged = false;
+    }
+  }
+
+  onLogOut():void{
+    this.tokenService.logOut();
+    window.location.reload();
+  }
   
   voyIngresar(){
     this.router.navigate(['/login']);
   }
+
+
 }

@@ -1,6 +1,6 @@
 export interface TrabajoModel {
     id: number;
     title: string;
-    years: number
+    years: number;
     description: string;
 }
