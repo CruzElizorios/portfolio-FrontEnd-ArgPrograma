@@ -1,0 +1,18 @@
+<li class="d-flex contLi">
+    <div class="barra">
+        <i class="fa-solid fa-arrow-right-long flecha"></i>
+    </div> 
+    <div>
+        <h5 class="titulo"> {{estudiosData.nombreEd}} <span class="subtitulo"> {{estudiosData.duracionEd}} </span></h5>
+        <p class="descrip">{{estudiosData.descripcionEd}}</p>
+        <div class="d-flex" *ngIf="tienePermiso">
+            <button type="button" class="btn btn-warning" routerLink="/editaredu/{{estudiosData.id}}">
+                <i class="fa-solid fa-pencil"></i>
+            </button>
+            <button type="button" class="btn btn-danger botonEliminar" (click)="deleteEducation(estudiosData)">
+                <i class="fa-solid fa-trash-can"></i>
+            </button>
+        </div>
+    </div>
+</li>
+

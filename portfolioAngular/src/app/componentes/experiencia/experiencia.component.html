@@ -2,15 +2,31 @@
     <div class="container-lg py-5">
         <div class="row">
             <div class="col px-4 colum1">
-                <h3 class="titulo">Mi experiencia</h3>
+                <h3 class="titulo">Mi experiencia </h3>
+                <div *ngIf="isLogged">
+                    <button type="button" class="btn btn-info" routerLink="/nuevaexp" *ngIf="isLogged">
+                        Añadir Experiencia
+                    </button>
+                </div>
                 <ul>
-                    <app-mistrabajos *ngFor="let unTrabajo of trabajos" [trabajosData]="unTrabajo"></app-mistrabajos>
+                    <app-mistrabajos *ngFor="let unTrabajo of expeList"
+                     [trabajosData]="unTrabajo" [tienePermiso]="isLogged"
+                     (trabajoRemove)="removeTrabajoDeLista($event)">
+                    </app-mistrabajos>
                 </ul>
             </div>
             <div class="col px-4 colum2">
                 <h3 class="titulo">Educación</h3>
+                <div *ngIf="isLogged">
+                    <button type="button" class="btn btn-info" routerLink="/nuevaedu" *ngIf="isLogged">
+                        Añadir Educación
+                    </button>
+                </div>
                 <ul>
-                    <app-mistrabajos *ngFor="let unTrabajo of trabajos" [trabajosData]="unTrabajo"></app-mistrabajos>
+                    <app-misestudios *ngFor="let unEstudio of eduList" 
+                    [estudiosData]="unEstudio" [tienePermiso]="isLogged"
+                    (estudioRemove)="removeEducacionDeLista($event)">
+                    </app-misestudios>
                 </ul>
             </div>
         </div>

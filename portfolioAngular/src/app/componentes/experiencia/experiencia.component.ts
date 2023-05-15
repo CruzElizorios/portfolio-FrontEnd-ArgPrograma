@@ -1,33 +1,57 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { EducacionModel } from 'src/app/models/educacion-model';
+import { TrabajoModel } from 'src/app/models/trabajos.model';
+import { EducacionService } from 'src/app/services/educacion.service';
+import { SExperienciaService } from 'src/app/services/s-experiencia.service';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-experiencia',
   templateUrl: './experiencia.component.html',
   styleUrls: ['./experiencia.component.css']
 })
-export class ExperienciaComponent {
+export class ExperienciaComponent implements OnInit{
   
-  trabajos:any = [
-    {
-    "id": 1,
-    "title": "trabajo 1",
-    "years": "2015-2016",
-    "urlimage":"https://companieslogo.com/img/orig/ACN_BIG.D-871a76ce.png?t=1633439499",
-    "description": "me encanta trabajar en este lugaaaaaaaaaaaaaaaaaaar aksjdksj aslkdfjsf alskjfalks sdksjdskj asdasd asd f hcxckv fd"
-  },
-  {
-    "id": 2,
-    "title": "trabajo 2",
-    "years": "2015-2018",
-    "urlimage":"../../../assets/img/logomerclibre.png",
-    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt ullam nostrum excepturi impedit optio consectetur maxime nobis veniam nemo itaque!"
-  },
-  {
-    "id": 3,
-    "title": "Ing Industrial UCA",
-    "years": "2023-2024",
-    "urlimage":"https://companieslogo.com/img/orig/ACN_BIG.D-871a76ce.png?t=1633439499",
-    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt ullam nostrum excepturi impedit optio consectetur maxime nobis veniam nemo itaque!"
+  expeList: TrabajoModel[] = [];
+  eduList: EducacionModel[] = [];
+
+  constructor(private sExperiencia: SExperienciaService,private sEducacion: EducacionService, private tokenService: TokenService ){}
+  
+  isLogged = false;
+
+  ngOnInit(): void {
+    this.cargarExperiencia();
+    this.cargarEducacion();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    }else{
+      this.isLogged = false;
+    }
   }
-]
+  
+  cargarExperiencia():void{
+    this.sExperiencia.lista().subscribe(data =>{this.expeList = data;})
+  }
+  
+  removeTrabajoDeLista(workToRemove: TrabajoModel):void{
+    this.sExperiencia.borrar(workToRemove.id).subscribe(
+      data=>{
+        this.cargarExperiencia();
+      }
+    )
+  }
+ 
+  cargarEducacion():void{
+    this.sEducacion.lista().subscribe(data =>{this.eduList = data;})
+  }
+
+  removeEducacionDeLista(educationToRemove: EducacionModel):void{
+    this.sEducacion.borrar(educationToRemove.id).subscribe(
+      data=>{
+        this.cargarEducacion();
+      }
+    )
+  }
+
 }
+

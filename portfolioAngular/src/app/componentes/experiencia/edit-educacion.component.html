@@ -1,0 +1,24 @@
+<div class="container-fluid px-1 py-5 formPadre">
+    <div class="container-lg py-5 px-5" *ngIf="educ">
+        <h4 class="text-center tituloExpForm">Editar Educación</h4>
+        <form (ngSubmit)="onUpdateEdu()" novalidate #f="ngForm" class="form-control" >
+            <div class="form-outline mb-4">
+                <label for="nombreEd" class="form-label">Nombre de la Institución</label>
+                <input type="text" class="form-control" id="nombreEd" name="nombreEd" [(ngModel)]="educ.nombreEd" required placeholder="instituto-curso">
+            </div>
+        
+            <div class="form-outline mb-4">
+                <label for="duracionEd" class="form-label">Años de Estudio</label>
+                <input type="text" class="form-control" id="duracionEd" name="duracionEd" [(ngModel)]="educ.duracionEd" required placeholder="año-año">
+            </div>
+            <div class="form-outline mb-4">
+                <label for="descripcionEd" class="form-label">Descripción de los Estudios</label>
+                <textarea type="text" class="form-control" id="descripcionEd" name="descripcionEd" [(ngModel)]="educ.descripcionEd" required placeholder="breve descripción de los temas comprendidos" rows="4"></textarea>
+            </div>
+            <!-- Submit button -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-block mb-4">ACTUALIZAR</button>
+            </div>
+        </form>
+    </div>
+</div>

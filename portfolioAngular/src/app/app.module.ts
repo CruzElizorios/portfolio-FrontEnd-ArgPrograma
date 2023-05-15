@@ -13,6 +13,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NewExperienciaComponent } from './componentes/experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia.component';
+import { MisestudiosComponent } from './componentes/misestudios/misestudios.component';
+import { NewEducacionComponent } from './componentes/experiencia/new-educacion.component';
+import { EditEducacionComponent } from './componentes/experiencia/edit-educacion.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +29,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ExperienciaComponent,
     MistrabajosComponent,
     InicioComponent,
-    LoginComponent
+    LoginComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent,
+    MisestudiosComponent,
+    NewEducacionComponent,
+    EditEducacionComponent
   ],
   imports: [
     BrowserModule,

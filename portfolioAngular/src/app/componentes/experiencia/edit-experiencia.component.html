@@ -1,0 +1,24 @@
+<div class="container-fluid px-1 py-5 formPadre">
+    <div class="container-lg  py-5 px-5" *ngIf="expLab">
+        <h4 class="text-center tituloExpForm">Editar Experiencia</h4>
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" class="form-control">
+            <div class="form-outline mb-4">
+                <label for="nombreE" class="form-label">Nombre de la Empresa</label>
+                <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="expLab.nombreE" required placeholder="empresa">
+            </div>
+        
+            <div class="form-outline mb-4">
+                <label for="duracionE" class="form-label">Años en la Empresa</label>
+                <input type="text" class="form-control" id="duracionE" name="duracionE"  [(ngModel)]="expLab.duracionE" required placeholder="año-año">
+            </div>
+            <div class="form-outline mb-4">
+                <label for="descripcionE" class="form-label">Descripción del puesto</label>
+                <textarea type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="expLab.descripcionE" required placeholder="breve descripción" rows="4"></textarea>
+            </div>
+            <!-- Submit button -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-block mb-4">ACTUALIZAR</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { TrabajoModel } from 'src/app/models/trabajos.model';
 
 @Component({
   selector: 'app-mistrabajos',
@@ -7,4 +8,11 @@ import { Component, Input } from '@angular/core';
 })
 export class MistrabajosComponent {
   @Input() trabajosData: any;
+  @Input() tienePermiso: any;
+  @Output() trabajoRemove: EventEmitter<TrabajoModel> = new EventEmitter();
+
+  deleteWork(workToDelete: TrabajoModel){
+    console.log("eliminar", workToDelete);
+    this.trabajoRemove.emit(workToDelete);
+  }
 }
