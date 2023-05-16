@@ -1,0 +1,24 @@
+.sobreMi{
+    background-color: var(--color-principal-negro);
+    display: flex;
+    align-items: center;
+}
+.sobreMi-titulo{
+    font-family: var(--letra-mayus);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    color: var(--color-blancoperlado);
+}
+.barras{
+    margin-top: 0.4rem;
+    margin-bottom: 1rem;
+}
+.barra-titulo{
+    color: aliceblue;
+    margin-top: 1rem;
+}
+.botonEliminar{
+    margin-left: 2%;
+    color: black;
+}
