@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Skill } from 'src/app/models/skill';
 import { SkillService } from 'src/app/services/skill.service';
 import { TokenService } from 'src/app/services/token.service';
@@ -8,7 +8,7 @@ import { TokenService } from 'src/app/services/token.service';
   templateUrl: './hys.component.html',
   styleUrls: ['./hys.component.css']
 })
-export class HysComponent {
+export class HysComponent implements OnInit{
     skill:Skill[] = [];
 
     constructor(private skillS: SkillService, private tokenService: TokenService) { }
@@ -33,7 +33,7 @@ export class HysComponent {
 
     delete(id: number){
       if(id != undefined){
-        this.skillS.eliminar(id).subscribe(
+        this.skillS.eliminar(id) .subscribe(
           data => {
             this.cargarSkills();
           })

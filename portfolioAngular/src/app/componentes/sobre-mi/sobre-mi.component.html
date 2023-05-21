@@ -7,9 +7,18 @@
                 <div class="sobreMi-img-piso"></div>
             </div>
             <div class="col-lg-7 col-md-6 col-11">
-                <p class="sobreMi-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis at doloribus voluptates ea voluptas quam magni aliquid modi repudiandae. Eligendi minima veniam asperiores quam beatae, nam quia nihil, quod culpa, consectetur ea? Quod ipsum praesentium provident aliquid incidunt deserunt natus ullam assumenda cumque, ut fuga reprehenderit quidem, magnam, obcaecati consequuntur.</p>
-                <p  class="sobreMi-parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, accusamus!</p>
-                <p  class="sobreMi-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis at doloribus voluptates ea voluptas quam magni aliquid modi repudiandae. Eligendi minima veniam asperiores quam beatae, nam quia nihil, quod culpa, consectetur ea? Q.</p>
+                <button type="button"  *ngIf="isLogged" class="btn btn-info mb-2" routerLink="/nuevainfo" > Añadir nueva descripción</button>
+                <div *ngFor="let info of infoList">
+                    <p class="sobreMi-parrafo">{{info.info}}</p>
+                    <div class="d-flex " *ngIf="isLogged">
+                        <button type="button" class="btn btn-warning" routerLink="/editarinfo/{{info.id}}">
+                            <i class="fa-solid fa-pencil"></i>
+                        </button>
+                        <button type="button" class="btn btn-danger botonEliminar" (click)="delete(info.id)">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
 

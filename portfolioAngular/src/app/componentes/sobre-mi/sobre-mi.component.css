@@ -32,7 +32,10 @@
     color: var(--color-principal-negro);
     font-size: 1rem;
 }
-
+.botonEliminar{
+    margin-left: 2%;
+    color: black;
+}
 @media screen and (max-width: 767px){
     .contSobreMi{
         margin-bottom: 2rem;

@@ -1,0 +1,15 @@
+<div class="container-fluid px-1 py-5 formPadre">
+    <div class="container-lg py-5 px-5">
+        <h4 class="text-center tituloExpForm">Agregar una Descripción</h4>
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm" class="form-control" >
+            <div class="form-outline mb-4">
+                <label for="info" class="form-label"></label>
+                <textarea type="text" class="form-control" id="info" name="info" [(ngModel)]="info" required placeholder="descripción" rows="5"></textarea>
+            </div>
+            <!-- Submit button -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-block mb-4">Añadir en Acerca de Mi</button>
+            </div>
+        </form>
+    </div>
+</div>
