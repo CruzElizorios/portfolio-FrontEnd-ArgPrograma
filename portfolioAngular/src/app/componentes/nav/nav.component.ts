@@ -37,5 +37,13 @@ export class NavComponent implements OnInit{
     this.router.navigate(['/login']);
   }
 
-
+  toSobreMi(){
+    document.getElementById("toSobremi").scrollIntoView({behavior:"smooth"})
+  }
+  toproyectos(){
+    document.getElementById("toProyectos").scrollIntoView({behavior:"smooth"})
+  }
+  toEducacion(){
+    document.getElementById("toEducacion").scrollIntoView({behavior:"smooth"})
+  }
 }

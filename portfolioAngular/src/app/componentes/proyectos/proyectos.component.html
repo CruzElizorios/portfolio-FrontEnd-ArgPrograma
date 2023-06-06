@@ -1,0 +1,26 @@
+<section id="toProyectos" class="apa container-fluid px-md-5 px-xs-1 py-5 proyect">
+    <div class="proyect-titulo">
+        <h3 class="sobreMi-titulo">Mis Proyectos</h3>
+        <button type="button"  *ngIf="isLogged" class="btn btn-info mb-2" routerLink="/newProyect" > Añadir nuevo Proyecto</button>
+    </div>
+    <div class="contendor">
+        <div *ngFor="let proyect of proyectList" class="card m-3" style="width: 20rem; border-radius: 1rem; ">
+            <img [src]="proyect.img" [alt]="proyect.img" class="card-img-top" style="border-radius: 1rem 1rem 0 0;" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title">{{proyect.titulo}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{proyect.tech}}</h6>
+              <p class="card-text">{{proyect.descrip}}</p>
+              <a [href]="proyect.linkgit" target="_blank" rel="noopener noreferrer" class="card-link git"><i class="bi bi-github"></i></a>
+              <a [href]="proyect.linkpreview" target="_blank" rel="noopener noreferrer" class="card-link deploy"><i class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+            <div class="d-flex botones" *ngIf="isLogged">
+                <button type="button" class="btn btn-warning" routerLink="/editarProyect/{{proyect.id}}">
+                    <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button type="button" class="btn btn-danger botonEliminar" (click)="delete(proyect.id)">
+                    <i class="fa-solid fa-trash-can"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

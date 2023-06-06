@@ -1,0 +1,35 @@
+<div class="container-fluid px-1 py-5 formPadre">
+    <div class="container-lg py-5 px-5">
+        <h4 class="text-center tituloExpForm">Agregar Nuevo Proyecto</h4>
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm" class="form-control" >
+            <div class="form-outline mb-4">
+                <label for="titulo" class="form-label">Titulo del Proyecto</label>
+                <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="titulo" required placeholder="proyecto x">
+            </div>
+            <div class="form-outline mb-4">
+                <label for="tech" class="form-label">Tecnologias Utilizadas</label>
+                <input type="text" class="form-control" id="tech" name="tech" [(ngModel)]="tech" required placeholder="Html, CSS, PHP, etc">
+            </div>
+            <div class="form-outline mb-4">
+                <label for="linkgit" class="form-label">Link del Repositorio</label>
+                <input type="text" class="form-control" id="linkgit" name="linkgit" [(ngModel)]="linkgit" required placeholder="https://github.com/tunombre/elproyecto">
+            </div>
+            <div class="form-outline mb-4">
+                <label for="linkpreview" class="form-label">Link al Deploy:</label>
+                <input type="text" class="form-control" id="linkpreview" name="linkpreview" [(ngModel)]="linkpreview" required placeholder="ej: githubpages, firebase, etc">
+            </div>
+            <div class="form-outline mb-4">
+                <label for="img" class="form-label">Imagen del Proyecto:</label>
+                <input type="text" class="form-control" id="img" name="img" [(ngModel)]="img" required placeholder="url: https://tuimagen.com">
+            </div>
+            <div class="form-outline mb-4">
+                <label for="descrip" class="form-label">Descripción del Mismo</label>
+                <textarea type="text" class="form-control" id="descrip" name="descrip" [(ngModel)]="descrip" required placeholder="breve descripción de la funcionalidad" rows="4"></textarea>
+            </div>
+            <!-- Submit button -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-block mb-4">Añadir Proyecto</button>
+            </div>
+        </form>
+    </div>
+</div>

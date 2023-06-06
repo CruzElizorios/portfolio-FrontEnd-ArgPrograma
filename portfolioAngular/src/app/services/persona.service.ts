@@ -8,11 +8,27 @@ import { persona } from '../models/persona.model';
   providedIn: 'root'
 })
 export class PersonaService {
-  URL = 'http://localhost:8080/personas/'
+  URL = 'http://localhost:8080/personas/';
+  //URL = 'https://backendicruz.onrender.com/personas/';
+  constructor(private httpClient: HttpClient) { }
 
-  constructor(private http: HttpClient) { }
-
-  public getPersona(): Observable <persona>{
-    return this.http.get<persona>(this.URL + 'traer/perfil/8')
+  public lista(): Observable<persona[]>{
+    return this.httpClient.get<persona[]>(this.URL + 'lista');
   }
+
+  public detalles(id: number): Observable<persona>{
+    return this.httpClient.get<persona>(this.URL + `detalles/${id}`);
+  }
+
+  
+  public actualizar(id: number, pers: persona): Observable<any>{
+    return this.httpClient.put<any>(this.URL + `editar/${id}`, pers);
+  }
+  
+  // public guardar(experiencia: persona): Observable<any>{
+  //   return this.httpClient.post<any>(this.URL + 'crear', experiencia);
+  // }
+  // public borrar(id: number): Observable<any>{
+  //   return this.httpClient.delete<any>(this.URL + `eliminar/${id}`);
+  // }
 }

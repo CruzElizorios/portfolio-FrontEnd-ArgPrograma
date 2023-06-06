@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { persona } from 'src/app/models/persona.model';
 import { PersonaService } from 'src/app/services/persona.service';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-banner',
@@ -9,11 +10,17 @@ import { PersonaService } from 'src/app/services/persona.service';
 })
 export class BannerComponent implements OnInit {
   
-  persona: persona = new persona( 0,"","","");
-  constructor(public personaService: PersonaService){}
-  
+  persona: persona = null;
+  constructor(public personaService: PersonaService, private tokenService: TokenService){}
+  isLogged = false;
+
   ngOnInit(): void {
-    this.personaService.getPersona().subscribe(data => {this.persona = data})
+    this.cargarPersona();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
   
   clasePerfil = 'banner-container-imagen-perfil vacio';
@@ -24,5 +31,11 @@ export class BannerComponent implements OnInit {
       this.clasePerfil = 'banner-container-imagen-perfil'
     }
   }
-
+  cargarPersona(): void{
+    this.personaService.detalles(8).subscribe(
+      data => {
+        this.persona = data;
+      }
+    )
+  }
 }

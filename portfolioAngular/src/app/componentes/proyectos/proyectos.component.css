@@ -1,0 +1,70 @@
+.proyect{
+    background-color: var(--color-blancoperlado); 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contendor{
+    max-width: 1280px;
+    width: 100%;
+    padding: 1% 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+.proyect-titulo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5%;
+}
+.sobreMi-titulo{
+    font-family: var(--letra-mayus);
+    font-size: 2rem;
+    color: var(--color-principal-negro);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*efecto de lineas*/
+.sobreMi-titulo::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--color-principal);
+    transform: scale(0,3);
+    transform-origin: center;
+    transition: transform 0.8s;
+    
+}
+.apa:hover .sobreMi-titulo::after {
+    transform: scale(1,1);
+}
+
+.git{
+    color: black;
+    font-size: 2.2rem;
+}
+.deploy:hover{
+    opacity: 0.5;
+}
+.git:hover{
+    opacity: 0.5;
+}
+.deploy{
+    color: cadetblue;
+    font-size: 2rem;
+}
+.botones{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+    margin-top: -5%;
+}

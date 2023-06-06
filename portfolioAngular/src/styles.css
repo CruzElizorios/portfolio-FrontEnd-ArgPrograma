@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Bruno+Ace+SC&display=swap");
 :root{
-	--color-principal-negro:rgb(51, 48, 44);
+	--color-principal-negro:#222;
 	--color-principal:#F9A826;
 	--color-principal-dark:#dc8c06;
 	--color-secundario:#00BFA6;
@@ -18,7 +18,7 @@
 	box-sizing: border-box;
 }
 body{
-    background-color: cadetblue;
+    background-color:darkolivegreen;
 	font-family: 'Bruno Ace', cursive;
 }
 a{

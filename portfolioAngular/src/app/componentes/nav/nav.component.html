@@ -4,14 +4,14 @@
     </div>
     <ul class="{{claseNav}}">
         <button (click)="desplegarNav()" class="nav-cerrar"><i class="fa-solid fa-xmark"></i></button>
-        <li><a href="">acerca de mi</a></li>
-        <li><a href="">mis proyectos</a></li>
-        <li><a href="">educación</a></li>
+        <li><a (click)="toSobreMi()" >acerca de mi</a></li>
+        <li><a (click)="toproyectos()">mis proyectos</a></li>
+        <li><a (click)="toEducacion()">educación</a></li>
     </ul>
 
     <ul class="nav-lista2">
-        <li><a href=""><i class="bi bi-github logo-github"></i></a></li>
-        <li><a href=""><i class="bi bi-linkedin logo-linke"></i></a></li>
+        <li><a href="https://github.com/CruzElizorios"><i class="bi bi-github logo-github"></i></a></li>
+        <li><a href="https://linkedin.com/in/iñaki-cruz-elizondo-rios?original_referer="><i class="bi bi-linkedin logo-linke"></i></a></li>
         <li>
             <button class="logo-ingresar" *ngIf="!isLogged" (click)="voyIngresar()"><i class="bi bi-person-circle"></i></button>
             <button class="logo-ingresar" (click)="onLogOut()" *ngIf="isLogged"><i class="fa-solid fa-door-open"></i></button>            

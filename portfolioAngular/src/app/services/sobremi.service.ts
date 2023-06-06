@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class SobremiService {
   sobreURl = 'http://localhost:8080/sobremi/';
+  //sobreURl = 'https://backendicruz.onrender.com/sobremi/';
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<SobremiModel[]>{

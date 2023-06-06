@@ -10,6 +10,21 @@
     padding: 1rem;
     color: var(--color-blancoperlado);
 }
+/*efecto de lineas*/
+.sobreMi-titulo::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: var(--color-principal);
+    transform: scale(0,3);
+    transform-origin: left;
+    transition: transform 1s;
+    
+}
+.apa:hover .sobreMi-titulo::after {
+    transform: scale(1,1);
+}
+
 .barras{
     margin-top: 0.4rem;
     margin-bottom: 1rem;
@@ -21,4 +36,10 @@
 .botonEliminar{
     margin-left: 2%;
     color: black;
+}
+
+@media screen and (max-width: 500px){
+    .sobreMi-titulo{
+        font-size: 1.8rem;
+    }
 }

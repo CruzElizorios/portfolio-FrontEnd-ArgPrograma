@@ -7,7 +7,8 @@ import { TrabajoModel } from '../models/trabajos.model';
   providedIn: 'root'
 })
 export class SExperienciaService {
-  expURl = 'http://localhost:8080/experiencia/'
+  expURl = 'http://localhost:8080/experiencia/';
+  //expURl = 'https://backendicruz.onrender.com/experiencia/';
   constructor(private httpClient: HttpClient){}
 
   public lista(): Observable<TrabajoModel[]>{

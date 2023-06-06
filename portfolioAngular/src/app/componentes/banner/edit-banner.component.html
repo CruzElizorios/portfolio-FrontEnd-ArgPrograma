@@ -1,0 +1,27 @@
+<div class="container-fluid px-1 py-5 formPadre">
+    <div class="container-lg  py-5 px-5" *ngIf="pers">
+        <h4 class="text-center tituloExpForm">Editar Perfil</h4>
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" class="form-control">
+            <div class="form-outline mb-4">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="pers.nombre" required placeholder="ej: juan">
+            </div>
+            <div class="form-outline mb-4">
+                <label for="apellido" class="form-label">Apellido:</label>
+                <input type="text" class="form-control" id="apellido" name="apellido"  [(ngModel)]="pers.apellido" required placeholder="ej: perez">
+            </div>
+            <div class="form-outline mb-4">
+                <label for="subtitulo" class="form-label">Profesión o Título:</label>
+                <input type="text" class="form-control" id="subtitulo" name="subtitulo" [(ngModel)]="pers.subtitulo" required placeholder="ej: FrontEnd Developer">
+            </div>
+            <div class="form-outline mb-4">
+                <label for="img" class="form-label">Imagen de Perfil:</label>
+                <input type="text" class="form-control" id="img" name="img" [(ngModel)]="pers.img" required placeholder="url: https://tuimagen.com">
+            </div>
+            <!-- Submit button -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-block mb-4">ACTUALIZAR</button>
+            </div>
+        </form>
+    </div>
+</div>

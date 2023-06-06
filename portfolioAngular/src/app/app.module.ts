@@ -9,7 +9,7 @@ import { BannerComponent } from './componentes/banner/banner.component';
 import { SobreMiComponent } from './componentes/sobre-mi/sobre-mi.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { MistrabajosComponent } from './componentes/mistrabajos/mistrabajos.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -23,6 +23,13 @@ import { EditSkillComponent } from './componentes/hys/edit-skill.component';
 import { NewSkillComponent } from './componentes/hys/new-skill.component';
 import { NewSobreMiComponent } from './componentes/sobre-mi/new-sobre-mi.component';
 import { EditSobreMiComponent } from './componentes/sobre-mi/edit-sobre-mi.component';
+import { FooterComponent } from './componentes/footer/footer.component';
+import { EditBannerComponent } from './componentes/banner/edit-banner.component';
+import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
+import { NgxUiLoaderModule } from 'ngx-ui-loader';
+import { SpinnerInterceptor } from './services/spinner.interceptor';
+import { NewProyectComponent } from './componentes/proyectos/new-proyect.component';
+import { EditProyectComponent } from './componentes/proyectos/edit-proyect.component';
 
 @NgModule({
   declarations: [
@@ -45,15 +52,23 @@ import { EditSobreMiComponent } from './componentes/sobre-mi/edit-sobre-mi.compo
     NewSkillComponent,
     NewSobreMiComponent,
     EditSobreMiComponent,
+    FooterComponent,
+    EditBannerComponent,
+    ProyectosComponent,
+    NewProyectComponent,
+    EditProyectComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxUiLoaderModule
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: SpinnerInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

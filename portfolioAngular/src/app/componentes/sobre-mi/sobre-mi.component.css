@@ -11,6 +11,21 @@
     padding: 1rem;
     color: var(--color-principal-negro);
 }
+/*efecto de lineas*/
+.sobreMi-titulo::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: var(--color-principal);
+    transform: scale(0,3);
+    transform-origin: left;
+    transition: transform 0.8s;
+    
+}
+.apa:hover .sobreMi-titulo::after {
+    transform: scale(1,1);
+}
+
 .contSobreMi{
     position: relative;
     z-index: 1;
