@@ -30,6 +30,7 @@ import { NgxUiLoaderModule } from 'ngx-ui-loader';
 import { SpinnerInterceptor } from './services/spinner.interceptor';
 import { NewProyectComponent } from './componentes/proyectos/new-proyect.component';
 import { EditProyectComponent } from './componentes/proyectos/edit-proyect.component';
+import { ContactoComponent } from './componentes/contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { EditProyectComponent } from './componentes/proyectos/edit-proyect.compo
     ProyectosComponent,
     NewProyectComponent,
     EditProyectComponent,
+    ContactoComponent,
   ],
   imports: [
     BrowserModule,

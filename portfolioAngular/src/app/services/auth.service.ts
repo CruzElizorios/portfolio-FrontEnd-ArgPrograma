@@ -9,8 +9,8 @@ import { JwtDto } from '../models/jwt-dto';
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = 'http://localhost:8080/autoriza/'
-  //authURL = 'https://backendicruz.onrender.com/autoriza/'
+  //authURL = 'http://localhost:8080/autoriza/'
+  authURL = 'https://backendicruz.onrender.com/autoriza/'
   constructor(private httpClient: HttpClient) { }
 
   public nuevo (nuevoUsuario: NuevoUsuario): Observable<any>{

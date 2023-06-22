@@ -17,7 +17,6 @@ export class NewSobreMiComponent {
     const descrp = new SobremiModel(this.info);
     this.infoServ.crear(descrp) .subscribe (
       data => {
-        alert("descripción creada correctamente");
         this.router.navigate(['']);
       }
     )

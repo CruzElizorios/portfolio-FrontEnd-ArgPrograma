@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SkillService {
-  URL = 'http://localhost:8080/skill/';
-  //URL = 'https://backendicruz.onrender.com/skill/';
+  //URL = 'http://localhost:8080/skill/';
+  URL = 'https://backendicruz.onrender.com/skill/';
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<Skill[]>{

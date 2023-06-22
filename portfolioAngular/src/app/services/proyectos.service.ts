@@ -7,8 +7,8 @@ import { ProyectosModel } from '../models/proyectos.model';
   providedIn: 'root'
 })
 export class ProyectosService {
-  URL = 'http://localhost:8080/proyectos/';
-  //URL = 'https://backendicruz.onrender.com/proyectos/';
+  //URL = 'http://localhost:8080/proyectos/';
+  URL = 'https://backendicruz.onrender.com/proyectos/';
   constructor(private httpClient: HttpClient) { }
   
   public lista(): Observable<ProyectosModel[]>{

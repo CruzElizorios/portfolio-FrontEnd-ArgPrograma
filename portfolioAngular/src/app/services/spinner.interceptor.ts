@@ -10,7 +10,7 @@ import { SpinnerService } from './spinner.service';
 
 @Injectable()
 export class SpinnerInterceptor implements HttpInterceptor {
-
+  
   constructor(private spinnerService: SpinnerService) {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {

@@ -1,0 +1,34 @@
+<section class="contacto container-fluid px-md-5 px-xs-1" id="toContacto">
+    <div class="row contenedor d-flex justify-content-center">
+        <div class="col-sm-12 col-md-6">
+            <h3 class="titulo">Di hola!</h3>
+            <h6 class="subtitulo">Si tienes ganas de realizar un nuevo proyecto o buscas una segunda opinión sobre uno
+                actual, no dudes en escribir me.</h6>
+        </div>
+        <div class="col-11 col-sm-10 col-md-6 contacto-form px-5 py-4">
+            <form [formGroup]="formulario" class="form" action="javascrip:void(0)" (submit)="enviarCorreo($event)">
+                <div class="form-outline mb-4">
+                    <input type="text" formControlName="name_emailjs" class="form-control" name="nombre" required
+                        placeholder="Tu Nombre y Apellido">
+                </div>
+                <div class="form-outline mb-4">
+                    <input type="email" formControlName="email_emailjs" class="form-control" name="correo" required
+                        placeholder="tucorreo@gmail.com ">
+                </div>
+                <div class="form-outline mb-4">
+                    <textarea type="text" formControlName="message_emailjs" class="form-control" name="descripProyecto"
+                        required placeholder="Descripción del proyecto" rows="4"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-block">Enviar</button>
+                </div>
+            </form>
+        </div>
+        <div [className]='claseAlerta'>
+            <div class="alert  text-center alert-success alert-dismissible fade show" role="alert">
+                <i class="bi bi-check2-circle" style="font-size: 1.1rem;"></i> Mensaje Enviado Correctamente!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+</section>

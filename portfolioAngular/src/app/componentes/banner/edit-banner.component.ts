@@ -25,7 +25,6 @@ export class EditBannerComponent implements OnInit{
     const id = this.activateRouter.snapshot.params['id'];
     this.sPersona.actualizar(id, this.pers).subscribe(
       data =>{
-        alert("cambios guardados");
         this.router.navigate(['']);
       }
     )

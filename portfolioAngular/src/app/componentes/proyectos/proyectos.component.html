@@ -4,8 +4,8 @@
         <button type="button"  *ngIf="isLogged" class="btn btn-info mb-2" routerLink="/newProyect" > Añadir nuevo Proyecto</button>
     </div>
     <div class="contendor">
-        <div *ngFor="let proyect of proyectList" class="card m-3" style="width: 20rem; border-radius: 1rem; ">
-            <img [src]="proyect.img" [alt]="proyect.img" class="card-img-top" style="border-radius: 1rem 1rem 0 0;" alt="...">
+        <div *ngFor="let proyect of proyectList" class="card m-3 tarjeta" style="width: 20rem; border-radius: 1rem; ">
+            <img [src]="proyect.img" [alt]="proyect.img" class="card-img-top" style="border-radius: 1rem 1rem 0 0;" alt="imagen de {{proyect.titulo}}">
             <div class="card-body text-center">
               <h5 class="card-title">{{proyect.titulo}}</h5>
               <h6 class="card-subtitle mb-2 text-muted">{{proyect.tech}}</h6>

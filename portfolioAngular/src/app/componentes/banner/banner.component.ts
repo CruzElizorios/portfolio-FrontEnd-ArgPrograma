@@ -32,10 +32,13 @@ export class BannerComponent implements OnInit {
     }
   }
   cargarPersona(): void{
-    this.personaService.detalles(8).subscribe(
+    this.personaService.detalles(1).subscribe(
       data => {
         this.persona = data;
       }
     )
+  }
+  toContacto(){
+    document.getElementById("toContacto").scrollIntoView({behavior:"smooth"})
   }
 }

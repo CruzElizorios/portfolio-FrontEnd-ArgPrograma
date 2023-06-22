@@ -22,7 +22,6 @@ export class NewExperienciaComponent implements OnInit {
   onCreate():void{
     const expe = new TrabajoModel(this.nombreE, this.duracionE, this.descripcionE);
     this.sExperiencia.guardar(expe).subscribe(data =>{
-      alert("Experiencia agregada");
       this.router.navigate(['']);
     })
   }

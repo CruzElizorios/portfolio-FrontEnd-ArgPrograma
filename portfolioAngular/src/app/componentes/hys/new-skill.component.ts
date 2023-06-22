@@ -21,7 +21,6 @@ export class NewSkillComponent  implements OnInit {
     const skill = new Skill(this.nombre, this.porcentaje);
     this.skillS.crear(skill).subscribe (
       data => {
-        alert("Skill creada correctamente");
         this.router.navigate(['']);
       }
     )
